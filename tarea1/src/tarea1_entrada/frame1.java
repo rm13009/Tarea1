@@ -5,6 +5,8 @@
  */
 package tarea1_entrada;
 
+import procesamiento.Procesamiento;
+
 /**
  *
  * @author Jose Carlos
@@ -137,9 +139,20 @@ public class frame1 extends javax.swing.JFrame {
         if(flag)return;
         
         for(int i = 0; i < 10; i++){
-            base_num[i] = Integer.parseInt(base_separado[i]);
+            base_num[i] = Double.parseDouble(base_separado[i]);
             exp_num[i] = Integer.parseInt(exp_separado[i]);
         }
+        
+        Procesamiento brain = new Procesamiento();
+        
+        double x;
+        for(int i = 0; i < 10; i++){
+           x = brain.respuesta(base_num[i], exp_num[i]);
+           ANS += x + "\n";
+        }
+        
+        ResultOutput.setText(ANS);
+        
     }//GEN-LAST:event_buttonActionPerformed
 
     /**

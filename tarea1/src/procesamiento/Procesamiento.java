@@ -15,17 +15,17 @@ public class Procesamiento {
     //siendo el número entero el exponente y el número decimal será 
     //la base inicial. Los resultados serán expresados con redondeo.
     
-    double respuesta( double exp, int base){
+    public double respuesta( double base, int exp){
     
-    int veces;
-    double numeroPotencia;
+        int veces;
+        double numeroPotencia;
     
-    numeroPotencia= 1;
-    veces = 0;
+        numeroPotencia= 1;
+        veces = 0;
   
-        while (veces< exp){
-        numeroPotencia = numeroPotencia * base;
-        veces++;
+            while (veces< exp){
+            numeroPotencia = numeroPotencia * base;
+            veces++;
         }    
     
         return numeroPotencia;  
